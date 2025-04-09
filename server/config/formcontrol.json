@@ -1,0 +1,287 @@
+{
+  "formcontrol": {
+    "title": "Add Patient Record",
+    "columns": [
+      {
+        "name": "patient-form",
+        "size": {
+          "xl": 12,
+          "lg": 12,
+          "md": 12,
+          "sm": 12
+        },
+        "type": "form",
+        "content": {
+          "id": "form2",
+          "formApi": {
+            "getUrl": "patients-data",
+            "postUrl": "patients-data",
+            "updateUrl": "patients-data/<id>"
+          },
+          "fields": [
+            {
+              "type": "textbox",
+              "size": {
+                "xl": 6,
+                "lg": 6,
+                "md": 12,
+                "sm": 12
+              },
+              "content": {
+                "inputType": "text",
+                "name": "patientId",
+                "placeholder": "PAT000",
+                "position": "horizontal",
+                "value": "",
+                "title": {
+                  "text": "Patient ID"
+                },
+                "validation": {
+                  "required": true,
+                  "type_check": true
+                },
+                "onError": {
+                  "position": "below",
+                  "message": {
+                    "required": "Patient ID is required",
+                    "type_check": "Invalid Patient ID format"
+                  }
+                }
+              }
+            },
+            {
+              "type": "textbox",
+              "size": {
+                "xl": 6,
+                "lg": 6,
+                "md": 12,
+                "sm": 12
+              },
+              "content": {
+                "inputType": "text",
+                "name": "fullName",
+                "placeholder": "Enter patient's full name",
+                "position": "horizontal",
+                "value": "",
+                "title": {
+                  "text": "Full Name"
+                },
+                "validation": {
+                  "required": true,
+                  "type_check": true
+                },
+                "onError": {
+                  "position": "below",
+                  "message": {
+                    "required": "Patient name is required",
+                    "type_check": "Invalid name format"
+                  }
+                }
+              }
+            },
+            {
+              "type": "textbox",
+              "size": {
+                "xl": 6,
+                "lg": 6,
+                "md": 12,
+                "sm": 12
+              },
+              "content": {
+                "inputType": "date",
+                "name": "dateOfBirth",
+                "position": "horizontal",
+                "value": "",
+                "title": {
+                  "text": "Date of Birth"
+                },
+                "validation": {
+                  "required": true
+                },
+                "onError": {
+                  "position": "below",
+                  "message": {
+                    "required": "Date of birth is required"
+                  }
+                }
+              }
+            },
+            {
+              "type": "dropdown",
+              "size": {
+                "xl": 6,
+                "lg": 6,
+                "md": 12,
+                "sm": 12
+              },
+              "content": {
+                "position": "horizontal",
+                "name": "gender",
+                "value": "",
+                "title": {
+                  "text": "Gender"
+                },
+                "options": [
+                  { "value": "Male", "label": "Male" },
+                  { "value": "Female", "label": "Female" },
+                  { "value": "Other", "label": "Other" }
+                ],
+                "validation": {
+                  "required": true
+                }
+              }
+            },
+            {
+              "type": "textbox",
+              "size": {
+                "xl": 6,
+                "lg": 6,
+                "md": 12,
+                "sm": 12
+              },
+              "content": {
+                "inputType": "tel",
+                "name": "phone",
+                "placeholder": "Enter phone number",
+                "position": "horizontal",
+                "value": "",
+                "title": {
+                  "text": "Phone Number"
+                },
+                "validation": {
+                  "required": true,
+                  "type_check": true
+                },
+                "onError": {
+                  "position": "below",
+                  "message": {
+                    "required": "Phone number is required",
+                    "type_check": "Invalid phone number format"
+                  }
+                }
+              }
+            },
+            {
+              "type": "textbox",
+              "size": {
+                "xl": 6,
+                "lg": 6,
+                "md": 12,
+                "sm": 12
+              },
+              "content": {
+                "inputType": "email",
+                "name": "email",
+                "placeholder": "Enter email address",
+                "position": "horizontal",
+                "value": "",
+                "title": {
+                  "text": "Email"
+                },
+                "validation": {
+                  "required": true,
+                  "type_check": true
+                },
+                "onError": {
+                  "position": "below",
+                  "message": {
+                    "required": "Email is required",
+                    "type_check": "Invalid email format"
+                  }
+                }
+              }
+            },
+            {
+              "type": "dropdown",
+              "size": {
+                "xl": 6,
+                "lg": 6,
+                "md": 12,
+                "sm": 12
+              },
+              "content": {
+                "position": "horizontal",
+                "name": "appointmentType",
+                "value": "",
+                "title": {
+                  "text": "Appointment Type"
+                },
+                "options": [
+                  { "value": "Regular Checkup", "label": "Regular Checkup" },
+                  { "value": "Cleaning", "label": "Cleaning" },
+                  { "value": "Emergency", "label": "Emergency" },
+                  { "value": "Consultation", "label": "Consultation" },
+                  { "value": "Follow-up", "label": "Follow-up" }
+                ],
+                "validation": {
+                  "required": true
+                }
+              }
+            },
+            {
+              "type": "textbox",
+              "size": {
+                "xl": 12,
+                "lg": 12,
+                "md": 12,
+                "sm": 12
+              },
+              "content": {
+                "inputType": "textarea",
+                "name": "medicalHistory",
+                "placeholder": "Enter relevant medical history",
+                "position": "horizontal",
+                "value": "",
+                "title": {
+                  "text": "Medical History"
+                },
+                "validation": {
+                  "required": false
+                }
+              }
+            },
+            {
+              "type": "textbox",
+              "size": {
+                "xl": 12,
+                "lg": 12,
+                "md": 12,
+                "sm": 12
+              },
+              "content": {
+                "inputType": "textarea",
+                "name": "notes",
+                "placeholder": "Enter additional notes",
+                "position": "horizontal",
+                "value": "",
+                "title": {
+                  "text": "Notes"
+                },
+                "validation": {
+                  "required": false
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "buttons": [
+      {
+        "id": "form_clear",
+        "type": "button",
+        "text": "Clear",
+        "theme": "btn_grey",
+        "formId": "form2"
+      },
+      {
+        "id": "form_save",
+        "type": "button",
+        "text": "Save Patient Record",
+        "theme": "btn_black",
+        "path": "/patients",
+        "formId": "form2"
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "header": {
+    "logo": {
+      "img": "/assets/logo.png"
+    },
+    "showSearch": true,
+    "showAlarm": true,
+    "notifications": [
+      {
+        "id": "1",
+        "message": "Welcome to the platform!",
+        "timestamp": "2024-01-20T10:00:00Z",
+        "isRead": false
+      }
+    ],
+    "profile": [
+      {
+        "id": "user_info",
+        "list": [
+          {
+            "id": "user_name",
+            "text": "Suresh S",
+            "subText": "sureshkgm@gmail.com"
+          },
+          {
+            "id": "user_actions",
+            "text": "Log Out",
+            "click": "logout"
+          }
+        ]
+      }
+    ]
+  }
+}

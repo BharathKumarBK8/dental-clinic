@@ -1,0 +1,197 @@
+{
+  "patients": {
+    "title": "Patient Records:",
+    "buttons": [
+      {
+        "type": "button",
+        "text": "Export",
+        "theme": "btn_grey"
+      },
+      {
+        "type": "button",
+        "text": "More Actions",
+        "theme": "btn_grey"
+      },
+      {
+        "id": "navigate",
+        "type": "button",
+        "text": "Add New Patient",
+        "theme": "btn_black",
+        "path": "/patients/add"
+      }
+    ],
+    "columns": [
+      {
+        "size": {
+          "xl": 12,
+          "lg": 12,
+          "md": 12,
+          "sm": 12
+        },
+        "type": "table",
+        "content": {
+          "options": {
+            "title": {},
+            "columns": [
+              {
+                "type": "text",
+                "label": "Patient ID",
+                "name": "patientId",
+                "showSort": true,
+                "showFilter": true,
+                "filter": {
+                  "showMenu": true,
+                  "showDropdown": false,
+                  "dropdownData": []
+                }
+              },
+              {
+                "type": "text",
+                "label": "Full Name",
+                "name": "fullName",
+                "showSort": true,
+                "showFilter": true,
+                "filter": {
+                  "showMenu": true,
+                  "showDropdown": false,
+                  "dropdownData": []
+                }
+              },
+              {
+                "type": "datetime",
+                "label": "Date of Birth",
+                "name": "dateOfBirth",
+                "showSort": true,
+                "showFilter": true,
+                "filter": {
+                  "showMenu": true,
+                  "showDropdown": false,
+                  "dropdownData": []
+                }
+              },
+              {
+                "type": "text",
+                "label": "Phone",
+                "name": "phone",
+                "showSort": true,
+                "showFilter": true,
+                "filter": {
+                  "showMenu": true,
+                  "showDropdown": false,
+                  "dropdownData": []
+                }
+              },
+              {
+                "type": "datetime",
+                "label": "Last Visit",
+                "name": "lastVisit",
+                "showSort": true,
+                "showFilter": true,
+                "filter": {
+                  "showMenu": true,
+                  "showDropdown": false,
+                  "dropdownData": []
+                }
+              },
+              {
+                "type": "datetime",
+                "label": "Next Appointment",
+                "name": "nextAppointment",
+                "showSort": true,
+                "showFilter": true,
+                "filter": {
+                  "showMenu": true,
+                  "showDropdown": false,
+                  "dropdownData": []
+                }
+              },
+              {
+                "type": "status",
+                "label": "Payment Status",
+                "name": "payment_status",
+                "showSort": true,
+                "showFilter": true,
+                "filter": {
+                  "showMenu": true,
+                  "showDropdown": true,
+                  "dropdownData": ["Paid", "Unpaid", "Pending"]
+                }
+              },
+              {
+                "type": "text",
+                "label": "Insurance",
+                "name": "insurance",
+                "showSort": true,
+                "showFilter": true,
+                "filter": {
+                  "showMenu": true,
+                  "showDropdown": true,
+                  "dropdownData": [
+                    "Delta Dental",
+                    "Cigna Dental",
+                    "MetLife",
+                    "Aetna",
+                    "Guardian",
+                    "United Healthcare",
+                    "None"
+                  ]
+                }
+              },
+              {
+                "type": "status",
+                "label": "Treatment Status",
+                "name": "treatment_status",
+                "showSort": true,
+                "showFilter": true,
+                "filter": {
+                  "showMenu": true,
+                  "showDropdown": true,
+                  "dropdownData": [
+                    "Active",
+                    "Pending",
+                    "Completed",
+                    "In Progress",
+                    "Urgent"
+                  ]
+                }
+              },
+              {
+                "type": "text",
+                "label": "Appointment Type",
+                "name": "appointmentType",
+                "showSort": true,
+                "showFilter": true,
+                "filter": {
+                  "showMenu": true,
+                  "showDropdown": true,
+                  "dropdownData": [
+                    "Regular Checkup",
+                    "Cleaning",
+                    "Emergency",
+                    "Consultation",
+                    "Follow-up"
+                  ]
+                }
+              },
+              {
+                "type": "text",
+                "label": "Medical History",
+                "name": "medicalHistory",
+                "showSort": true,
+                "showFilter": true,
+                "filter": {
+                  "showMenu": true,
+                  "showDropdown": false,
+                  "dropdownData": []
+                }
+              }
+            ]
+          },
+          "data": {
+            "url": "patients-data"
+          }
+        }
+      }
+    ]
+  }
+}

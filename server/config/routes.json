@@ -1,0 +1,44 @@
+{
+  "routes": [
+    {
+      "path": "/",
+      "configPath": "dashboard",
+      "isPrivate": false
+    },
+    {
+      "path": "patients/records",
+      "configPath": "formcontrol",
+      "isPrivate": true
+    },
+    {
+      "path": "/patients",
+      "configPath": "patients",
+      "isPrivate": true
+    },
+    {
+      "path": "/patients/add",
+      "configPath": "formcontrol",
+      "isPrivate": true
+    },
+    {
+      "path": "/patients/:id/edit",
+      "configPath": "formcontrol",
+      "isPrivate": true
+    },
+    {
+      "path": "/products/",
+      "configPath": "products",
+      "isPrivate": true
+    },
+    {
+      "path": "/products/add",
+      "configPath": "product-form",
+      "isPrivate": true
+    },
+    {
+      "path": "/products/:id/edit",
+      "configPath": "product-form",
+      "isPrivate": true
+    }
+  ]
+}

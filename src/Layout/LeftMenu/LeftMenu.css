@@ -1,0 +1,122 @@
+#left-menu {
+  .leftMenus {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    background-color: var(--leftmenu-bg-clr);
+    height: calc(100vh - 56px);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    justify-content: space-between;
+  }
+
+  .s-m-fw {
+    font-weight: var(--leftmenu-s-m-fw-font-weight);
+    margin-left: 12px;
+  }
+
+  .leftMenus a i {
+    margin-right: 12px;
+    font-size: 18px;
+  }
+
+  .leftMenus a,
+  .section-label {
+    display: flex;
+    align-items: center;
+    color: var(--leftmenu-seclab-txt-clr);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    font-size: var(--leftmenu-font-size);
+    padding: 12px 16px;
+    margin: 2px 0;
+    line-height: 1.4;
+  }
+
+  .leftMenus a:hover {
+    background-color: var(--leftmenu-hover-bg-clr);
+    transform: translateX(4px);
+  }
+
+  .children {
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    max-height: 0;
+    opacity: 0;
+    margin-left: 8px;
+  }
+
+  .children.slide-down {
+    max-height: 200px;
+    opacity: 1;
+  }
+
+  .children a {
+    font-size: calc(var(--leftmenu-font-size) - 1px);
+    padding: 10px 16px 10px 32px;
+    margin: 2px 0;
+  }
+
+  .children a.line-child::after {
+    opacity: 0.4;
+    background: url('/public/assets/line.svg');
+    height: 32px;
+  }
+
+  .children a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 2px;
+    background-color: transparent;
+    border-radius: 4px;
+  }
+
+  .children a::after,
+  .children a::before {
+    transition: all 0.2s ease;
+  }
+
+  .children a:hover::before,
+  .children a.selected-child::before {
+    opacity: 1;
+    background: url("/public/assets/arrow.svg");
+  }
+
+  .selected-child {
+    font-weight: var(--leftmenu-selchild-font-weight);
+    background-color: var(--leftmenu-selchild-bg-clr);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  }
+
+  .count {
+    background-color: var(--leftmenu-count-bg-clr);
+    color: var(--leftmenu-count-txt-clr);
+    border-radius: 20px;
+    padding: 4px 12px;
+    margin-left: auto;
+    font-size: 12px;
+    font-weight: var(--leftmenu-count-font-weight);
+  }
+
+  .arrow-icon {
+    margin-left: auto;
+    width: 12px;
+    transition: transform 0.2s ease;
+  }
+
+  /* Add this if you want to rotate arrow when menu is open */
+  .arrow-icon.open {
+    transform: rotate(180deg);
+  }
+
+  .footer {
+    margin-top: auto;
+    padding: 16px 0;
+    background-color: transparent;
+    text-align: center;
+    font-size: 14px;
+  }
+}
